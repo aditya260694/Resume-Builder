@@ -1,0 +1,22 @@
+{{extend 'layout.html'}}
+<!--<table>
+<th>
+	<tr>
+		<td><b>Sender</b></td>
+		<td><b>Subject</b></td>
+		<td><b>Message</b></td>
+	</tr>
+</th>
+{{for i in r:}}
+	<tr>    
+        	<td>{{=i.sender}}</td>
+	        <td>{{=i.sub}}</td>
+	        <td>{{=i.msg}}</td>
+	</tr>
+{{pass}}
+</table>-->
+<h3>View you conversations with:</h3><br />
+<ul>
+{{for i in dict_companies.keys():}}
+    <li><a href="single_company_msg.html" args='dict_companies[i]'>{{=i}}</a>
+{{pass}}
